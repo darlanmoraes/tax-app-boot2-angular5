@@ -1,0 +1,40 @@
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+@import 'https://fonts.googleapis.com/icon?family=Material+Icons';
+
+body {
+  margin: 0;
+  font-family: Roboto, sans-serif;
+}
+
+.tax-card-title {
+  border-radius: 3px;
+  background: #ccc;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.w-5 {
+  width: 5%;
+}
+
+.w-25 {
+  width: 25%;
+}
+
+.w-30 {
+  width: 30%;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.center {
+  text-align: center;
+}

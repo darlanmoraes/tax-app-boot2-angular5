@@ -1,0 +1,36 @@
+<mat-card>
+  <mat-card-header class="tax-card-title">Listagem de Clientes</mat-card-header>
+  <mat-card-content>
+    <table class="table">
+      <thead>
+        <th class="w-5"><div>#</div></th>
+        <th class="w-30"><div>Nome</div></th>
+        <th class="w-25"><div>Salário(R$)</div></th>
+        <th class="w-25"><div>Endereço</div></th>
+        <th class="w-5"><div class="center">Risco</div></th>
+        <th class="w-5"><div class="center">Juros</div></th>
+        <th class="w-5"><div class="center">-</div></th>
+      </thead>
+      <tbody>
+        <tr *ngFor="let client of clients">
+          <td>{{ client.id }}</td>
+          <td>{{ client.name }}</td>
+          <td>{{ client.salary ? client.salary : '-' }}</td>
+          <td>{{ client.address ? client.address : '-' }}</td>
+          <td><div class="center">{{ client.risk ? client.risk : '-' }}</div></td>
+          <td>
+            <div class="center">
+              <button mat-icon-button color="primary" [routerLink]="['/client-tax', client.id]"><mat-icon>timeline</mat-icon></button>
+            </div>
+          </td>
+          <td>
+            <div class="center">
+              <button mat-icon-button color="primary" [routerLink]="['/client-edit', client.id]"><mat-icon>edit</mat-icon></button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </mat-card-content>
+  <button mat-fab color="primary" [routerLink]="['/client-add']"><mat-icon>add</mat-icon></button>
+</mat-card>

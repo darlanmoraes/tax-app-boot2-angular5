@@ -1,0 +1,20 @@
+<mat-card>
+  <form #clientForm="ngForm" (ngSubmit)="onCalculate(clientForm.value)">
+    <mat-card-header class="tax-card-title">Taxas para o cliente: {{client.name}} [{{ percentage }}]</mat-card-header>
+    <mat-card-content>
+      <input type="hidden" name="href" [(ngModel)]="client.href">
+      <mat-form-field class="w-50">
+        <input matInput placeholder="Valor do empréstimo(R$)" #value required type="number" name="value" [(ngModel)]="values.value" min="800" max="9999" ng-pattern="/^123456789$/" />
+      </mat-form-field>
+      <br />
+      <mat-form-field class="w-50">
+        <input matInput placeholder="Tempo de empréstimo(em meses):" #time required type="number" name="time" [(ngModel)]="values.time" min="800" max="9999" ng-pattern="/^123456789$/" />
+      </mat-form-field>
+      <div *ngIf="taxedValue" class="tax-card-tax">Valor total: {{ taxedValue }}</div>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" type="submit" [disabled]="!clientForm.form.valid">Calcular</button>
+      <a mat-button routerLink="/client-list">Cancelar</a>
+    </mat-card-actions>
+  </form>
+</mat-card>

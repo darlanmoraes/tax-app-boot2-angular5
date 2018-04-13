@@ -1,0 +1,11 @@
+version: '2.1'
+services:
+  mysql:
+    image: mysql:5.5.59
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_USER=tax-username
+      - MYSQL_PASSWORD=tax-password
+      - MYSQL_DATABASE=tax-calculation
+      - MYSQL_ROOT_PASSWORD=tax-root-password

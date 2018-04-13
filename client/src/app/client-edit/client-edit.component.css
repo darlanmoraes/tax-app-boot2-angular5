@@ -1,0 +1,6 @@
+/* REMOVE BUTTONS MARGIN */
+.mat-card .mat-card-actions {
+  margin-left: 0;
+  margin-right: 0;
+}
+/* END SIMULATE BOOTSTRAP TABLE */

@@ -1,0 +1,14 @@
+/* REMOVE BUTTONS MARGIN */
+.mat-card .mat-card-actions {
+  margin-left: 0;
+  margin-right: 0;
+}
+/* END SIMULATE BOOTSTRAP TABLE */
+
+.tax-card-tax {
+  border-radius: 3px;
+  background: #ccc;
+  padding: 15px;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
